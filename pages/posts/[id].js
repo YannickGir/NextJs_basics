@@ -3,6 +3,7 @@ import React from "react";
 import Head from "next/head";
 import Layout from '../../components/layout';
 import { getAllPostIds, getPostData } from '../../lib/posts';
+import Date from '../../components/date';
 
 export async function getStaticProps({ params }) {
   const postData = await getPostData(params.id);
@@ -26,7 +27,7 @@ export default function Post({postData}) {
     <>
     <Layout>
           <Head>
-        <title>First Post</title>
+        <title>{postData.title}</title>
         
       </Head>
      
@@ -35,7 +36,8 @@ export default function Post({postData}) {
       <br />
       {postData.id}
       <br />
-      {postData.date}
+      <Date dateString={postData.date}/>
+      
       <br />
       <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
     </Layout>
