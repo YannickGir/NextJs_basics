@@ -2,7 +2,16 @@ import Link from "next/link";
 import React from "react";
 import Head from "next/head";
 import Layout from '../../components/layout';
-import { getAllPostIds } from '../../lib/posts';
+import { getAllPostIds, getPostData } from '../../lib/posts';
+
+export async function getStaticProps({ params }) {
+  const postData = getPostData(params.id);
+  return {
+    props: {
+      postData,
+    },
+  };
+}
 
 export async function getStaticPaths() {
   const paths = getAllPostIds();
@@ -12,7 +21,7 @@ export async function getStaticPaths() {
   };
 }
 
-export default function First_post() {
+export default function Post({postData}) {
   return (
     <>
     <Layout>
@@ -22,8 +31,12 @@ export default function First_post() {
       </Head>
      
       <img src="/images/index.jpg" alt="Your Name" />
-      <h1>First post </h1>
-      <Link href={"/"}>Return to home !</Link>
+      {postData.title}
+      <br />
+      {postData.id}
+      <br />
+      {postData.date}
+      
     </Layout>
     
     </>
