@@ -2,7 +2,15 @@ import Link from "next/link";
 import React from "react";
 import Head from "next/head";
 import Layout from '../../components/layout';
+import { getAllPostIds } from '../../lib/posts';
 
+export async function getStaticPaths() {
+  const paths = getAllPostIds();
+  return {
+    paths,
+    fallback: false,
+  };
+}
 
 export default function First_post() {
   return (
