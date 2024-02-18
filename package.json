@@ -7,6 +7,7 @@
   },
   "dependencies": {
     "date-fns": "^3.3.1",
+    "formik": "^2.4.5",
     "gray-matter": "^4.0.3",
     "next": "latest",
     "react": "18.2.0",
