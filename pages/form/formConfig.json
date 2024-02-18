@@ -1,0 +1,84 @@
+
+{
+    "registrationForm": [
+      {
+        "name": "firstName",
+        "label": "First Name",
+        "type": "text",
+        "required": true
+      },
+      {
+        "name": "lastName",
+        "label": "Last Name",
+        "type": "text",
+        "required": true
+      },
+      {
+        "name": "email",
+        "label": "Email",
+        "type": "email",
+        "required": true
+      },
+      {
+        "name": "password",
+        "label": "Password",
+        "type": "password",
+        "required": true
+      },
+      {
+        "name": "confirmPassword",
+        "label": "Confirm Password",
+        "type": "password",
+        "required": true
+      },
+      {
+        "name": "birthdate",
+        "label": "Birthdate",
+        "type": "date",
+        "required": false
+      },
+      {
+        "name": "gender",
+        "label": "Gender",
+        "type": "select",
+        "options": ["Male", "Female", "Other"],
+        "required": false
+      }
+      
+    ],
+    "contactForm": [
+      {
+        "name": "fullName",
+        "label": "Full Name",
+        "type": "text",
+        "required": true
+      },
+      {
+        "name": "email",
+        "label": "Email",
+        "type": "email",
+        "required": true
+      },
+      {
+        "name": "subject",
+        "label": "Subject",
+        "type": "text",
+        "required": false
+      },
+      {
+        "name": "message",
+        "label": "Message",
+        "type": "textarea",
+        "required": true
+      },
+      {
+        "name": "subscribe",
+        "label": "Subscribe to newsletter",
+        "type": "checkbox",
+        "required": false
+      }
+      
+    ]
+   
+  }
+  

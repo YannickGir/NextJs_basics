@@ -47,6 +47,9 @@ export default function Home({ allPostsData }) {
           ))}
         </ul>
         </section>
+        <section className={utilStyles.headingMd}>
+        <Link href='./form/formPage'>aller au formulaire dynamique !</Link>
+        </section>
     </Layout>
   );
 }
